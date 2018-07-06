@@ -1,0 +1,61 @@
+img {
+	width: 30%;
+	margin: 1%;
+	border: 5px inset #976ade;
+	z-index: 1;
+}
+img:hover {
+	z-index: -2;
+	border-radius: 50%;
+	border: 3px dashed #00ff00;
+	opacity: 0.5;
+}
+.pet-labels	p {
+	display: inline-block;
+	position: absolute;
+	text-align: center;
+	font-size: 50px;
+	color: #a50c5f;
+	text-shadow: 2px 2px #000000;
+	font-family: 'Galada', cursive;
+	z-index: -1;
+}
+#tony {
+	top: 265px;
+	left: 150px;
+}
+#cleo {
+	top: 265px;
+	left: 565px;
+}
+#birdie {
+	top: 265px;
+	left: 970px;
+}
+#franklin {
+	top: 675px;
+	left: 117px;
+}
+#nacho {
+	top: 675px;
+	left: 550px;
+}
+#nutella {
+	top: 675px;
+	left: 960px;
+}
+#noodle {
+	top: 1090px;
+	left: 125px;
+}
+#holla {
+	top: 1090px;
+	left: 560px;
+}
+#ween {
+	top: 1090px;
+	left: 970px;
+}
+/*.correct-kitten {
+	border: 15px solid #28f9ef;
+}*/
