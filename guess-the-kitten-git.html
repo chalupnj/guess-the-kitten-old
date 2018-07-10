@@ -2,29 +2,53 @@
 <html>
 <head>
 	<title>Kittens!</title>
-	<link rel = "stylesheet" type="text/css" href="kitty-grid.css">
+	<link rel = "stylesheet" type="text/css" href="kitty-grid-flex.css">
 	<link href = "https://fonts.googleapis.com/css?family=Galada" rel = "stylesheet">
 </head>
 <body>
-	<img src = "cat-imgs/Tony.jpg">
-	<img src = "cat-imgs/Cleo.jpg">
-	<img src = "cat-imgs/Birdie.jpg">
-	<img src = "cat-imgs/Franklin.jpg">
-	<img src = "cat-imgs/Nacho.jpg">
-	<img src = "cat-imgs/Nutella.jpg">
-	<img src = "cat-imgs/Noodle.jpg">
-	<img src = "cat-imgs/Holla.jpg">
-	<img src = "cat-imgs/Ween.jpg">
-	<div class = "pet-labels">
-		<p id = "tony">Tony</p>
-		<p id = "cleo">Cleo</p>
-		<p id = "birdie">Birdie</p>
-		<p id = "franklin">Franklin</p>
-		<p id = "nacho">Nacho</p>
-		<p id = "nutella">Nutella</p>
-		<p id = "noodle">Noodle</p>
-		<p id = "holla">Holla</p>
-		<p id = "ween">Ween</p>
+	<div class = "row">
+		<div class = "column">
+			<div class = "img-container">
+				<img src = "cat-imgs/Tony.jpg">
+				<figcaption>Tony</figcaption>
+			</div>
+			<div class = "img-container">
+				<img src = "cat-imgs/Franklin.jpg">
+				<figcaption>Franklin</figcaption>
+			</div>
+			<div class = "img-container">
+				<img src = "cat-imgs/Noodle.jpg">
+				<figcaption>Noodle</figcaption>
+			</div>
+		</div>
+		<div class = "column">
+			<div class = "img-container">
+				<img src = "cat-imgs/Cleo.jpg">
+				<figcaption>Cleo</figcaption>
+			</div>
+			<div class = "img-container">	
+				<img src = "cat-imgs/Nacho.jpg">
+				<figcaption>Nacho</figcaption>
+			</div>
+			<div class = "img-container">	
+				<img src = "cat-imgs/Holla.jpg">
+				<figcaption>Holla</figcaption>
+			</div>
+		</div>
+		<div class = "column">
+			<div class = "img-container">
+				<img src = "cat-imgs/Birdie.jpg">
+				<figcaption>Birdie</figcaption>
+			</div>
+			<div class = "img-container">
+				<img src = "cat-imgs/Nutella.jpg">
+				<figcaption>Nutella</figcaption>
+			</div>
+			<div class = "img-container">		
+				<img src = "cat-imgs/Ween.jpg">
+				<figcaption>Ween</figcaption>
+			</div>
+		</div>
 	</div>
 <script src = "kitten-script.js"></script>
 </body>

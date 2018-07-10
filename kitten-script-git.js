@@ -1,6 +1,6 @@
 //Find username
 var username = prompt("What is your name?");
-console.log("This guy is " + username);
+console.log("This guy is " + username + ".");
 
 //Psychopath test
 var notPsychopath=confirm("Hello there " + username + ". Do you like kittens?");
@@ -21,32 +21,32 @@ var kittens = [{
 	traits: ["disgusting", "stinky", "disabled", "perfect", "of a big plop"]
 },
 {
-	name: "Cleo",
-	traits: ["majestic", "hygenic", "stunning", "slutty", "angelic"]
-},
-{
-	name: "Birdie",
-	traits: ["flirty", "old ladyish", "scared", "shy", "pudgy"]
-},
-{
 	name: "Franklin",
 	traits: ["poopy", "loud", "cross-eyed", "idiotic", "handsome"]
-},
-{
-	name: "Nacho",
-	traits: ["owned by Ashley", "spunky", "sleepy", "adopted", "friendly"]
-},
-{
-	name: "Nutella",
-	traits: ["much of a boss bitch", "playful", "climby", "cute", "fast"]
 },
 {
 	name: "Noodle",
 	traits: ["much of a lil guy", "runty", "cunty", "little", "stunty"]
 },
 {
+	name: "Cleo",
+	traits: ["majestic", "hygenic", "stunning", "slutty", "angelic"]
+},
+{
+	name: "Nacho",
+	traits: ["owned by Ashley", "spunky", "sleepy", "adopted", "friendly"]
+},
+{
 	name: "Holla",
 	traits: ["ginger", "stripey", "purr-fect", "licky", "jumpy"]
+},
+{
+	name: "Birdie",
+	traits: ["flirty", "old ladyish", "scared", "shy", "pudgy"]
+},
+{
+	name: "Nutella",
+	traits: ["much of a boss bitch", "playful", "climby", "cute", "fast"]
 },
 {
 	name: "Ween",
@@ -76,7 +76,7 @@ while (guessIsCorrect != true) {
 	var guessedKitten = kittens.findIndex(x => x.name===capGuess);
 	if (capGuess===secretKitten) {
 		var guessIsCorrect = true;
-		alert("YOU'RE A GENIUS!!! The secret kitten is " + secretKitten);
+		alert("YOU'RE A GENIUS!!! The secret kitten is " + secretKitten + ".");
 	//show kitten's pic somehow
 	}
 	else if (guessedKitten >= 0) {
