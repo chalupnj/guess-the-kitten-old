@@ -15,7 +15,7 @@ else {
 
 //Guess the kitten game
 
-//Kittens array of objects of array
+//Kittens array of objects of array. YO UPDATE, BE SURE TO ADD KITTEN IN SAME TOP-BOTTOM ORDER AS IN HTML!
 var kittens = [{
 	name: "Tony",
 	traits: ["disgusting", "stinky", "disabled", "perfect", "of a big plop"]
@@ -27,6 +27,10 @@ var kittens = [{
 {
 	name: "Noodle",
 	traits: ["much of a lil guy", "runty", "cunty", "little", "stunty"]
+},
+{
+	name: "Kevvie",
+	traits: ["hyper", "adventurous", "smelly in the butt region", "social", "shoe-loving"]
 },
 {
 	name: "Cleo",
@@ -41,20 +45,24 @@ var kittens = [{
 	traits: ["ginger", "stripey", "purr-fect", "licky", "jumpy"]
 },
 {
+	name: "Jimmie",
+	traits: ["whiny", "petite", "scared to leave the bedroom", "hygenic", "pillow-loving"]
+},
+{
 	name: "Birdie",
 	traits: ["flirty", "old ladyish", "scared", "shy", "pudgy"]
 },
 {
 	name: "Nutella",
-	traits: ["much of a boss bitch", "playful", "climby", "cute", "fast"]
+	traits: ["boss bitch", "playful", "climby", "cute", "fast"]
 },
 {
 	name: "Ween",
 	traits: ["fluffy", "scarf-like", "spooky", "stealthy", "bitey"]
 }];
 
-//Randomly choose the secret kitten
-var k = Math.floor((Math.random() * 9));
+//Randomly choose the secret kitten -- CHANGE THE NUMBER TO # OF KITTENS
+var k = Math.floor((Math.random() * 11));
 var secretKitten = kittens[k].name;
 console.log(secretKitten);
 
