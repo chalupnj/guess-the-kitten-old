@@ -18,7 +18,7 @@ else {
 //Kittens array of objects of array. YO UPDATE, BE SURE TO ADD KITTEN IN SAME TOP-BOTTOM ORDER AS IN HTML!
 var kittens = [{
 	name: "Tony",
-	traits: ["disgusting", "stinky", "disabled", "perfect", "of a big plop"]
+	traits: ["disgusting", "stinky", "disabled", "flawless", "of a big plop"]
 },
 {
 	name: "Franklin",
@@ -29,8 +29,12 @@ var kittens = [{
 	traits: ["much of a lil guy", "runty", "cunty", "little", "stunty"]
 },
 {
-	name: "Kevvie",
-	traits: ["hyper", "adventurous", "smelly in the butt region", "social", "shoe-loving"]
+	name: "Liberace",
+	traits: ["hyper", "adventurous", "smelly in the butt region", "deceased", "shoe-loving"]
+},
+{
+	name: "Angeweena Joween",
+	traits: ["half chimpanzee", "middle child", "snoozy", "family-oriented", "lazy"]
 },
 {
 	name: "Cleo",
@@ -45,8 +49,12 @@ var kittens = [{
 	traits: ["ginger", "stripey", "purr-fect", "licky", "jumpy"]
 },
 {
-	name: "Jimmie",
-	traits: ["whiny", "petite", "scared to leave the bedroom", "hygenic", "pillow-loving"]
+	name: "Liam",
+	traits: ["whiny", "petite", "scared to leave the bedroom", "pukey", "pillow-loving"]
+},
+{
+	name: "Meatloaf",
+	traits: ["loafy", "puffy", "nuzzly", "neck-loving", "perfect"]
 },
 {
 	name: "Birdie",
@@ -59,40 +67,63 @@ var kittens = [{
 {
 	name: "Ween",
 	traits: ["fluffy", "scarf-like", "spooky", "stealthy", "bitey"]
+},
+{
+	name: "Fartima",
+	traits: ["farty", "screamy", "social", "poopful", "tweeny"]
 }];
 
 //Randomly choose the secret kitten -- CHANGE THE NUMBER TO # OF KITTENS
-var k = Math.floor((Math.random() * 11));
+var k = Math.floor((Math.random() * 14));
 var secretKitten = kittens[k].name;
 console.log(secretKitten);
 
-//User guesses kittens function--need to figure out how to do this
+// Get the modal
+var modal = document.getElementById('guessModal');
+
+// Get the button that opens the modal
+if (notPsychopath==false) {
+	modal.style.visibility = "visible";
+}
+
+	//Get guess
+	function getRadioVal(form, name) {
+	    var guess;
+	    // get list of radio buttons with specified name
+	    var radios = form.elements[name];
+	    
+	    for (var i=0; i<kittens.length; i++) {
+	        if (radios[i].checked ) { // radio checked?
+	            guess = radios[i].value; // if so, hold its value in val
+	            break; // and break out of for loop
+	        }
+	    }
+	    return guess; // return value of checked radio or undefined if none checked
+	}
+
+//User guesses kittens function
 var guessIsCorrect = false;
 var guessNum = 1;
-while (guessIsCorrect != true) {
+function checkAnswer() {
 	var i = Math.floor((Math.random() * 5));
 	var j = Math.floor((Math.random() * 5));
-	var guess = prompt("Guess which kitten I am thinking of!");
-	
-	//Capitalize. Why can't I combine these??
-	function capitalize(guess) {
-		return guess.charAt(0).toUpperCase() + guess.slice(1);
-	}
-	var capGuess = capitalize(guess);
+
+	// Get the guess
+	var guess = getRadioVal(document.getElementById("form"), "kittyName");
+	console.log(guess);
 
 	//Check right or wrong
-	var guessedKitten = kittens.findIndex(x => x.name===capGuess);
-	if (capGuess===secretKitten) {
+	var guessedKitten = kittens.findIndex(x => x.name===guess);
+	if (guess===secretKitten) {
 		var guessIsCorrect = true;
+		console.log("correct");
 		alert("YOU'RE A GENIUS!!! The secret kitten is " + secretKitten + ".");
-	//show kitten's pic somehow
-	}
-	else if (guessedKitten >= 0) {
-		alert("WRONG! That kitten is too " + kittens[guessedKitten].traits[i] + ". The kitten I am thinking of is more " + kittens[k].traits[j] + ". Click Ok to guess again.");
-		guessNum++;
+		modal.style.visibility = "hidden";
+		highlightCorrectKitten();
 	}
 	else {
-		alert("You dummy! That's not a valid guess. Click Ok and try again.");
+		alert("WRONG! That kitten is too " + kittens[guessedKitten].traits[i] + ". The kitten I am thinking of is more " + kittens[k].traits[j] + ". Click Ok to guess again.");
+		console.log("wrong");
 		guessNum++;
 	}
 }
@@ -106,5 +137,17 @@ else {
 }
 
 //Animate answer
-var kittenPic = document.getElementsByTagName("img")[k];
-kittenPic.classList.add("correct-kitten");
+function highlightCorrectKitten() {
+	var kittenPic = document.getElementsByTagName("img")[k];
+	kittenPic.classList.add("correct-kitten");
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.visibility = "hidden";
+    }
+}
+function closeModal() {
+    modal.style.visibility = "hidden";
+}

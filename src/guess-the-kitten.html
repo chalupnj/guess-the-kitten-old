@@ -8,7 +8,50 @@
 
 <!-- TO ADD CATS, CROP PIC TO A SQUARE. ADD NEW IMG-CONTAINER DIV, ONE TO EACH COLUMN DIV SO THEY'RE EVEN. MAKE SURE TO ADD KITTEN TRAITS TO JS FILE IN THIS ORDER (TOP>BOTTOM). -->
 <body>
+
+<!-- Modal -->
+<div id="guessModal" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" onclick="closeModal()" data-dismiss="modal">&times;</button>
+        <h3 class="modal-title">Which kitten am I thinking of?</h3>
+      </div>
+      <div class="modal-body">
+        <form id="form">
+        	<div class="form-col">
+	        	<input type="radio" name="kittyName" value="Tony">Tony<br>
+	        	<input type="radio" name="kittyName" value="Cleo">Cleo<br>
+	        	<input type="radio" name="kittyName" value="Franklin">Franklin<br>
+	        	<input type="radio" name="kittyName" value="Birdie">Birdie<br>
+	        	<input type="radio" name="kittyName" value="Nacho">Nacho<br>
+        	</div>
+        	<div class="form-col">
+	        	<input type="radio" name="kittyName" value="Nutella">Nutella<br>
+	        	<input type="radio" name="kittyName" value="Noodle">Noodle<br>
+	        	<input type="radio" name="kittyName" value="Holla">Holla<br>
+	        	<input type="radio" name="kittyName" value="Ween">Ween<br>
+	        	<input type="radio" name="kittyName" value="Liberace">Liberace<br>
+	        </div>
+	        <div class="form-col">
+	        	<input type="radio" name="kittyName" value="Liam">Liam<br>
+	        	<input type="radio" name="kittyName" value="Fartima">Fartima<br>
+	        	<input type="radio" name="kittyName" value="Angeweena Joween">Angeweena Joween<br>
+	        	<input type="radio" name="kittyName" value="Meatloaf">Meatloaf<br>
+			</div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="button" onclick="checkAnswer()">Submit</button>
+		<button type="button" class="button close" onclick="closeModal()" data-dismiss="modal">Just show me the kitties already!</button>
+      </div>
+    </div>
+
+  </div>
+</div>
 	<div class = "row">
+		<!-- Column 1 -->
 		<div class = "column">
 			<div class = "img-container">
 				<img src = "cat-imgs/Tony.jpg">
@@ -23,10 +66,15 @@
 				<figcaption>Noodle</figcaption>
 			</div>
 			<div class = "img-container">		
-				<img src = "cat-imgs/Kevvie.jpg">
-				<figcaption>Kevvie</figcaption>
+				<img src = "cat-imgs/Liberace.jpg">
+				<figcaption>Liberace</figcaption>
+			</div>
+			<div class = "img-container">		
+				<img src = "cat-imgs/Angeweena-Joween.jpg">
+				<figcaption>Angeweena Joween</figcaption>
 			</div>
 		</div>
+		<!-- Column 2 -->
 		<div class = "column">
 			<div class = "img-container">
 				<img src = "cat-imgs/Cleo.jpg">
@@ -41,10 +89,15 @@
 				<figcaption>Holla</figcaption>
 			</div>
 			<div class = "img-container">		
-				<img src = "cat-imgs/Jimmie.jpg">
-				<figcaption>Jimmie</figcaption>
+				<img src = "cat-imgs/Liam.jpg">
+				<figcaption>Liam</figcaption>
+			</div>
+			<div class = "img-container">		
+				<img src = "cat-imgs/Meatloaf.jpg">
+				<figcaption>Meatloaf</figcaption>
 			</div>
 		</div>
+		<!-- Column 3 -->
 		<div class = "column">
 			<div class = "img-container">
 				<img src = "cat-imgs/Birdie.jpg">
@@ -57,6 +110,10 @@
 			<div class = "img-container">		
 				<img src = "cat-imgs/Ween.jpg">
 				<figcaption>Ween</figcaption>
+			</div>
+			<div class = "img-container">		
+				<img src = "cat-imgs/Fartima.jpg">
+				<figcaption>Fartima</figcaption>
 			</div>
 		</div>
 	</div>
