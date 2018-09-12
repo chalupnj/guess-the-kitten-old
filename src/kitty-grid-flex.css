@@ -12,7 +12,8 @@ figcaption {
 	font-family: 'Galada', cursive;
 	z-index: -1;
 	position: relative;
-	bottom: 130px;
+	bottom: 110px;
+	line-height: 55px;
 }
 .row {
 	display: flex;
