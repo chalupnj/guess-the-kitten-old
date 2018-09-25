@@ -15,6 +15,9 @@ figcaption {
 	bottom: 110px;
 	line-height: 55px;
 }
+.disabled-radio {
+	color: #c8c8c8;
+}
 .row {
 	display: flex;
 	flex-wrap: wrap;
